@@ -144,7 +144,7 @@
       const items = D.plats.filter((p) => p.cat === c.id);
       const min = Math.min(...items.map((p) => p.prix));
       return `<a class="cat-card reveal" href="carte.html#${c.id}">
-        <div class="cat-card__media"><img src="${img(items[0].img)}" alt="" loading="lazy"></div>
+        <div class="cat-card__media"><img src="${img(c.cover || items[0].img)}" alt="" loading="lazy"></div>
         <div class="cat-card__body"><span class="cat-card__ico"><svg class="ico"><use href="#i-${c.icone}"/></svg></span><h3>${esc(c.nom)}</h3>
         <p>${items.length} choix · dès ${euro(min)}</p></div>
         <svg class="ico cat-card__arrow"><use href="#i-arrow"/></svg></a>`;
