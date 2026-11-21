@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infos & contact · Bambou chez Zhu, Nanterre</title>
+  <meta name="description" content="Adresse, plan d'accès, horaires et téléphone de Bambou chez Zhu : 35 boulevard du Général Leclerc, 92000 Nanterre. Tél. 09 63 45 01 12.">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <meta property="og:title" content="Infos & contact · Bambou chez Zhu">
+  <meta property="og:image" content="images/lieu/facade.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('images/lieu/facade.webp');background-position:center 60%"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / <span>Infos & contact</span></nav>
+        <h1>Venez nous <span class="accent">voir</span></h1>
+        <p class="lead">Adresse, plan, horaires, téléphone : toutes les informations pratiques pour venir au Bambou ou nous joindre.</p>
+      </div>
+    </section>
+
+    <!-- INFOS + CARTE -->
+    <section class="section infos">
+      <div class="container infos__inner">
+        <div class="infos__card reveal">
+          <p class="eyebrow">Infos pratiques</p>
+          <h2>Bambou <span class="accent">chez Zhu</span></h2>
+          <ul class="infos__list">
+            <li><svg class="ico"><use href="#i-pin"/></svg><div><strong>Adresse</strong><span>35 boulevard du Général Leclerc<br>92000 Nanterre</span></div></li>
+            <li><svg class="ico"><use href="#i-clock"/></svg><div><strong>Horaires</strong><span>Lundi – samedi : 10h00 – 20h20<br>Dimanche : fermé</span></div></li>
+            <li><svg class="ico"><use href="#i-phone"/></svg><div><strong>Téléphone</strong><span><a href="tel:+33963450112">09 63 45 01 12</a></span></div></li>
+            <li><svg class="ico"><use href="#i-bike"/></svg><div><strong>Livraison</strong><span>Sur Deliveroo, à Nanterre et alentours</span></div></li>
+          </ul>
+          <div class="infos__btns">
+            <a class="btn btn--primary js-maps" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg> Itinéraire</a>
+            <a class="btn btn--ghost" href="tel:+33963450112"><svg class="ico"><use href="#i-phone"/></svg> Appeler</a>
+            <a class="btn btn--ghost" href="reserver.html">Réserver</a>
+          </div>
+        </div>
+        <div class="infos__map reveal">
+          <div class="map-gate" id="mapGate">
+            <div>
+              <svg class="ico"><use href="#i-pin"/></svg>
+              <h3>Afficher la carte Google Maps</h3>
+              <p>La carte est fournie par Google, qui peut déposer des cookies sur votre appareil. Elle ne s'affiche qu'avec votre accord.</p>
+              <div class="btns">
+                <button class="btn btn--primary btn--sm" id="mapAccept">Afficher la carte</button>
+                <a class="btn btn--ghost btn--sm js-maps" href="#" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+              </div>
+            </div>
+          </div>
+          <iframe title="Carte : Bambou, 35 boulevard du Général Leclerc, Nanterre" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map" hidden></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORAIRES & ACCÈS -->
+    <section class="section">
+      <div class="container split-block">
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Horaires</p>
+          <h2>Quand <span class="accent">venir&nbsp;?</span></h2>
+          <table class="hours">
+            <tbody id="hoursTable"></tbody>
+            <tr><td>Livraison</td><td>Selon les horaires affichés sur Deliveroo</td></tr>
+          </table>
+          <p class="note">Les horaires peuvent varier (jours fériés, vacances). Dans le doute, appelez-nous ou consultez notre page Deliveroo.</p>
+        </div>
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Accès</p>
+          <h2>Comment <span class="accent">venir&nbsp;?</span></h2>
+          <ul>
+            <li><strong>À pied</strong> : le restaurant donne sur une place piétonne, avec sa terrasse et ses chaises vertes.</li>
+            <li><strong>Repère</strong> : cherchez la façade noire avec les enseignes « BAR · BAMBOU · BRASSERIE » et le pilier vert.</li>
+            <li><strong>En transports</strong> : utilisez le bouton « Itinéraire » pour voir le trajet en métro, RER, bus ou voiture depuis chez vous.</li>
+          </ul>
+          <a class="btn btn--ghost js-maps" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg> Calculer mon itinéraire</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2>On répond à <span class="accent">tout</span></h2>
+        </header>
+        <div class="faq reveal">
+          <details><summary>Peut-on manger sur place ?</summary><div><p>Oui, en salle ou en terrasse. Toute la carte est servie sur place, ainsi que la carte des boissons de la brasserie.</p></div></details>
+          <details><summary>Faut-il réserver ?</summary><div><p>Ce n'est pas obligatoire, mais c'est conseillé pour les groupes et le week-end. Vous pouvez <a class="link" href="reserver.html">réserver en ligne</a> ou par téléphone.</p></div></details>
+          <details><summary>Peut-on commander à emporter ?</summary><div><p>Oui. Appelez-nous au 09 63 45 01 12, puis venez récupérer votre commande au restaurant.</p></div></details>
+          <details><summary>Vos plats sont-ils halal ?</summary><div><p>Nos hors-d'œuvre et nos plats chauds sont préparés avec des viandes halal (pastille « Halal » sur la carte).</p></div></details>
+          <details><summary>Servez-vous de l'alcool ?</summary><div><p>Oui, au bar : bières pression et bouteille, vin. La vente d'alcool est interdite aux mineurs.</p></div></details>
+          <details><summary>Comment vous contacter ?</summary><div><p>Par téléphone au 09 63 45 01 12, ou directement au restaurant.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

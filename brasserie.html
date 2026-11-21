@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brasserie & bar · Bambou chez Zhu, Nanterre</title>
+  <meta name="description" content="La brasserie et le bar Bambou à Nanterre : café, thé, boissons fraîches, bières pression Asahi et Monaco, bières bouteille et vin. Salle lumineuse et terrasse sur la place.">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <meta property="og:title" content="Brasserie & bar · Bambou chez Zhu">
+  <meta property="og:image" content="images/lieu/facade.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="brasserie">
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('images/lieu/facade.webp')"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / <span>Brasserie & bar</span></nav>
+        <h1>Brasserie <span class="accent">&</span> bar</h1>
+        <p class="lead">Une grande salle lumineuse, une terrasse sur la place et un comptoir. On vient pour un café, un déjeuner ou une pression entre amis.</p>
+      </div>
+    </section>
+
+    <!-- EXPLICATION -->
+    <section class="section">
+      <div class="container split-block">
+        <div class="split-block__media curtain"><img src="images/lieu/salle.jpg" onerror="this.onerror=null;this.src='images/lieu/interieur.jpg'" alt="Le comptoir vert et lumineux de la brasserie" loading="lazy"></div>
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Sur place</p>
+          <h2>Un lieu pour <span class="accent">se poser</span></h2>
+          <p>Le Bambou n'est pas seulement un traiteur : c'est aussi une brasserie et un bar où l'on peut s'asseoir, à l'intérieur comme en terrasse.</p>
+          <ul>
+            <li><strong>La salle</strong> : claire, avec des touches de vert bambou et des luminaires chaleureux.</li>
+            <li><strong>La terrasse</strong> : sur la place piétonne, avec ses chaises vertes, idéale aux beaux jours.</li>
+            <li><strong>Le comptoir</strong> : pour un café rapide ou une bière à la pression.</li>
+          </ul>
+          <p>Toute notre carte asiatique peut aussi se déguster sur place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTS -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Du matin au soir</p>
+          <h2>Quand <span class="accent">venir&nbsp;?</span></h2>
+          <p class="section__lead">Ouvert du lundi au samedi de 10h00 à 20h20, le Bambou change d'ambiance au fil de la journée.</p>
+        </header>
+        <div class="timeline">
+          <div class="tl reveal"><div class="tl__dot"><svg class="ico"><use href="#i-coffee"/></svg></div><small>Dès 10h</small><h3>La pause café</h3><p>Expresso, cappuccino, chocolat ou thé au jasmin, en salle ou en terrasse.</p></div>
+          <div class="tl reveal"><div class="tl__dot"><svg class="ico"><use href="#i-bowl"/></svg></div><small>Le midi</small><h3>Le déjeuner</h3><p>Un plat au wok, un menu ou des sushis, sur place ou à emporter au bureau.</p></div>
+          <div class="tl reveal"><div class="tl__dot"><svg class="ico"><use href="#i-leaf"/></svg></div><small>L'après-midi</small><h3>La terrasse</h3><p>Une boisson fraîche, une limonade ou un diabolo au soleil, sur la place.</p></div>
+          <div class="tl reveal"><div class="tl__dot"><svg class="ico"><use href="#i-beer"/></svg></div><small>En fin de journée</small><h3>L'apéro</h3><p>Asahi ou Monaco à la pression, une Tsingtao ou un verre de vin entre amis.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTE DES BOISSONS -->
+    <section class="section brasserie" id="boissons">
+      <div class="container brasserie__inner">
+        <div class="brasserie__text reveal">
+          <p class="eyebrow">Servie sur place</p>
+          <h2>La carte des <span class="accent">boissons</span></h2>
+          <p class="section__lead">Voici les boissons servies à la brasserie et au bar. Elles sont différentes des boissons en canette proposées en livraison (voir la page « La carte »).</p>
+          <ul class="lieu__facts">
+            <li><strong>Boissons chaudes</strong><span>de 2,10 € à 4,50 €</span></li>
+            <li><strong>Boissons fraîches</strong><span>de 3,50 € à 4 €</span></li>
+            <li><strong>Bières</strong><span>pression et bouteille, dès 3,50 €</span></li>
+            <li><strong>Vin</strong><span>blanc, rouge, rosé : 2,80 €</span></li>
+          </ul>
+          <button class="btn btn--ghost" id="openPoster" style="margin-top:24px">Voir la carte originale</button>
+        </div>
+        <div class="menu-card reveal" id="menuCard"></div>
+      </div>
+    </section>
+
+    <!-- BIÈRES -->
+    <section class="section section--alt">
+      <div class="container split-block split-block--rev">
+        <div class="split-block__media curtain" style="background:#fff"><img src="images/biere-tsingtao.webp" alt="Bière Tsingtao" loading="lazy" style="object-fit:contain;padding:30px"></div>
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Le coin du bar</p>
+          <h2>Nos <span class="accent">bières</span></h2>
+          <p><strong>À la pression</strong>, en 25 cl ou 50 cl :</p>
+          <ul>
+            <li><strong>Asahi</strong> : la bière blonde japonaise, sèche et rafraîchissante.</li>
+            <li><strong>Monaco</strong> : le panaché à la grenadine, doux et fruité.</li>
+          </ul>
+          <p><strong>En bouteille</strong> : Heineken, Super Bock, Leffe blonde, et la chinoise <strong>Tsingtao</strong> (33 cl ou 64 cl), aussi disponible en livraison.</p>
+          <p class="note">L'abus d'alcool est dangereux pour la santé, à consommer avec modération. Vente d'alcool interdite aux mineurs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div><h2 class="no-words">On vous garde une place en terrasse&nbsp;?</h2><p>35 boulevard du Général Leclerc, Nanterre. Du lundi au samedi, 10h00 – 20h20.</p></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn--primary btn--lg" href="contact.html"><svg class="ico"><use href="#i-pin"/></svg> Venir nous voir</a>
+            <a class="btn btn--ghost btn--lg" href="tel:+33963450112"><svg class="ico"><use href="#i-phone"/></svg> Appeler</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="poster" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__poster" role="dialog" aria-modal="true" aria-label="Carte des boissons de la brasserie">
+      <button class="modal__close" data-close aria-label="Fermer"><svg class="ico"><use href="#i-close"/></svg></button>
+      <img src="images/lieu/carte-boissons-brasserie.webp" alt="Carte des boissons de la brasserie Bambou" loading="lazy">
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

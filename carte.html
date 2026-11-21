@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La carte · Bambou chez Zhu, Nanterre</title>
+  <meta name="description" content="Toute la carte de Bambou chez Zhu à Nanterre : menus, inari, special rolls, sushis saumon, hors-d'œuvre halal, plats chauds au wok, accompagnements, boissons et desserts, avec photos et prix.">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <meta property="og:title" content="La carte · Bambou chez Zhu">
+  <meta property="og:image" content="images/sushi-3-saumon-8-california.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="carte">
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('images/poisson-sel-poivre.webp');filter:blur(18px) saturate(1.3)"></div>
+      <div class="page-hero__mosaic" aria-hidden="true">
+        <img src="images/inari-avocat-saumon.webp" alt=""><img src="images/gyoza-poulet.webp" alt=""><img src="images/roll-vegetarien.webp" alt="">
+        <img src="images/poulet-caramel.webp" alt=""><img src="images/bobun-boeuf.webp" alt=""><img src="images/nems-poulet.webp" alt="">
+        <img src="images/riz-cantonais.webp" alt=""><img src="images/salade-algues.webp" alt=""><img src="images/perles-de-coco.webp" alt="">
+      </div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / <span>La carte</span></nav>
+        <h1>La carte</h1>
+        <p class="lead"><span class="js-count">55</span> plats et boissons, rangés en 10 catégories. Chaque plat a sa photo, son prix et sa description. Cliquez sur un plat pour l'agrandir.</p>
+      </div>
+    </section>
+
+    <!-- MODE D'EMPLOI -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="steps">
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-layers"/></svg></div><h3>Choisissez une catégorie</h3><p>Utilisez les onglets (Menus, Inari, Plats chauds…). Une courte explication présente chaque catégorie.</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-search"/></svg></div><h3>Ou cherchez un ingrédient</h3><p>Tapez « crevette », « saumon » ou « poulet » dans la barre de recherche : tous les plats concernés s'affichent.</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-bike"/></svg></div><h3>Commandez sur Deliveroo</h3><p>Le bouton « Commander » vous emmène sur notre page Deliveroo. Le plat s'y trouve dans la même catégorie.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LA CARTE -->
+    <section class="section carte" id="carte">
+      <div class="container">
+        <div class="carte__toolbar" id="toolbar">
+          <div class="tabs" id="tabs" role="tablist" aria-label="Catégories"></div>
+          <label class="search">
+            <svg class="ico"><use href="#i-search"/></svg>
+            <input type="search" id="search" placeholder="Rechercher un plat ou un ingrédient (ex : crevette, saumon…)" autocomplete="off" aria-label="Rechercher un plat">
+          </label>
+        </div>
+
+        <div class="carte__intro" id="catIntro"></div>
+        <div class="subtabs" id="subtabs" hidden>
+          <button class="chip is-active" data-sub="all">Tous les plats chauds</button>
+          <button class="chip" data-sub="viandes">Viandes (9,90 €)</button>
+          <button class="chip" data-sub="mer">Fruits de mer (11,90 €)</button>
+        </div>
+        <div class="legend" aria-label="Légende des pastilles">
+          <span class="tag tag--halal">Halal</span>
+          <span class="tag tag--vege">Végétarien</span>
+          <span class="tag tag--epice">Épicé</span>
+          <span class="tag tag--mer">Fruits de mer</span>
+          <span class="tag tag--promo">1 acheté = 1 offert</span>
+        </div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden>Aucun plat ne correspond à votre recherche. Essayez un autre mot, par exemple « poulet ».</p>
+
+        <div class="sauces reveal">
+          <h3>Les sauces</h3>
+          <p class="note">À ajouter à votre commande. La sauce soja salée est offerte.</p>
+          <ul id="sauces"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEXIQUE -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Pour bien choisir</p>
+          <h2>Le petit <span class="accent">lexique</span></h2>
+          <p class="section__lead">Vous ne connaissez pas certains noms ? Voici ce qui se cache derrière chaque spécialité.</p>
+        </header>
+        <div class="lexique">
+          <div class="lex reveal"><img src="images/inari-avocat-saumon.webp" alt="" loading="lazy"><div><h3>Inari</h3><p>Un petit sachet de tofu frit, légèrement sucré, rempli de riz vinaigré et garni sur le dessus.</p></div></div>
+          <div class="lex reveal"><img src="images/roll-tempura-crevette-avocat.webp" alt="" loading="lazy"><div><h3>Roll / maki</h3><p>Riz et garniture roulés dans une feuille d'algue, puis coupés en tranches.</p></div></div>
+          <div class="lex reveal"><img src="images/sushi-3-saumon-8-california.webp" alt="" loading="lazy"><div><h3>California</h3><p>Un roll « à l'envers » : le riz est à l'extérieur, la feuille d'algue à l'intérieur.</p></div></div>
+          <div class="lex reveal"><img src="images/sushi-8-saumon.webp" alt="" loading="lazy"><div><h3>Sushi (nigiri)</h3><p>Une boulette de riz vinaigré surmontée d'une tranche de poisson cru, ici du saumon.</p></div></div>
+          <div class="lex reveal"><img src="images/tempura-crevettes.webp" alt="" loading="lazy"><div><h3>Tempura</h3><p>Une friture japonaise très légère et croustillante, ici autour de crevettes.</p></div></div>
+          <div class="lex reveal"><img src="images/gyoza-poulet.webp" alt="" loading="lazy"><div><h3>Gyoza</h3><p>Des raviolis japonais en forme de demi-lune, grillés d'un côté et tendres de l'autre.</p></div></div>
+          <div class="lex reveal"><img src="images/nems-poulet.webp" alt="" loading="lazy"><div><h3>Nem</h3><p>Un rouleau frit et croustillant, farci de viande ou de crevettes et de vermicelles.</p></div></div>
+          <div class="lex reveal"><img src="images/rouleau-printemps.webp" alt="" loading="lazy"><div><h3>Rouleau de printemps</h3><p>Une galette de riz fraîche, non frite, garnie de crudités, de vermicelles, de poulet et de crevettes.</p></div></div>
+          <div class="lex reveal"><img src="images/bobun-boeuf.webp" alt="" loading="lazy"><div><h3>Bobun</h3><p>Un plat complet vietnamien : vermicelles de riz, crudités, nem et bœuf sauté, servi tiède.</p></div></div>
+          <div class="lex reveal"><img src="images/poulet-citronnelle.webp" alt="" loading="lazy"><div><h3>Wok</h3><p>La grande poêle asiatique : on y saute les plats très vite à feu vif, pour garder le croquant.</p></div></div>
+          <div class="lex reveal"><img src="images/salade-algues.webp" alt="" loading="lazy"><div><h3>Wakamé</h3><p>Une algue marinée au sésame, servie froide en salade, fraîche et légèrement iodée.</p></div></div>
+          <div class="lex reveal"><img src="images/perles-de-coco.webp" alt="" loading="lazy"><div><h3>Perles de coco</h3><p>Un dessert de riz gluant, moelleux, roulé dans la noix de coco râpée.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPÈRES -->
+    <section class="section section--alt">
+      <div class="container split-block">
+        <div class="split-block__media curtain"><img src="images/crevettes-sauce-piquante.webp" alt="Crevettes sauce piquante" loading="lazy"></div>
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Les pastilles</p>
+          <h2>Comprendre les <span class="accent">repères</span></h2>
+          <ul>
+            <li><span class="tag tag--halal">Halal</span> : plat préparé avec une viande halal. Tous nos hors-d'œuvre et plats chauds le sont.</li>
+            <li><span class="tag tag--vege">Végétarien</span> : sans viande ni poisson.</li>
+            <li><span class="tag tag--epice">Épicé</span> : relevé au piment, pour ceux qui aiment.</li>
+            <li><span class="tag tag--mer">Fruits de mer</span> : contient des crevettes ou du poisson.</li>
+            <li><span class="tag tag--promo">1 acheté = 1 offert</span> : offre en cours sur Deliveroo.</li>
+          </ul>
+          <p class="note">Allergies ou question sur un ingrédient ? Appelez-nous au <a href="tel:+33963450112">09 63 45 01 12</a> avant de commander.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div><h2 class="no-words">Votre choix est fait&nbsp;?</h2><p>Retrouvez tous ces plats sur notre page Deliveroo.</p></div>
+          <a class="btn btn--primary btn--lg js-deliveroo" href="#"><svg class="ico"><use href="#i-bike"/></svg> Commander maintenant</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

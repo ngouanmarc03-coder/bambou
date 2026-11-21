@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réserver une table · Bambou chez Zhu, Nanterre</title>
+  <meta name="description" content="Réservez votre table chez Bambou à Nanterre, en salle ou en terrasse, et choisissez votre menu à l'avance. Confirmation par téléphone.">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <meta property="og:title" content="Réserver une table · Bambou chez Zhu">
+  <meta property="og:image" content="images/lieu/facade.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reserver">
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image:url('images/lieu/facade.webp');background-position:center 70%"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / <span>Réserver</span></nav>
+        <h1>Réserver une <span class="accent">table</span></h1>
+        <p class="lead">En salle ou en terrasse, et si vous le souhaitez, choisissez votre menu à l'avance : il sera prêt à votre arrivée.</p>
+      </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="section section--tight">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Comment ça marche</p>
+          <h2>Réserver en <span class="accent">4 étapes</span></h2>
+        </header>
+        <div class="steps">
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-calendar"/></svg></div><h3>Date et heure</h3><p>Choisissez le jour, l'heure d'arrivée, le nombre de personnes et votre place (salle ou terrasse).</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-bowl"/></svg></div><h3>Votre menu (facultatif)</h3><p>Ajoutez les plats que vous voulez à l'avance. Le total s'affiche. Vous payez sur place.</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-pen"/></svg></div><h3>Vos coordonnées</h3><p>Nom et téléphone, pour qu'on puisse vous joindre. Signalez aussi vos allergies.</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-phone"/></svg></div><h3>Confirmation</h3><p>Nous vous rappelons ou vous envoyons un message pour <strong>confirmer</strong> la réservation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE -->
+    <section class="section section--alt" id="formulaire">
+      <div class="container resa">
+        <form class="resa__form" name="reservation" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field" id="resaForm" novalidate>
+          <input type="hidden" name="form-name" value="reservation">
+          <p hidden><label>Ne pas remplir : <input name="bot-field"></label></p>
+
+          <!-- 1 -->
+          <fieldset class="resa__block reveal">
+            <legend><span>1</span> Votre table</legend>
+            <div class="fields fields--3">
+              <label class="field"><span>Date *</span><input type="date" name="date" id="rDate" required></label>
+              <label class="field"><span>Heure d'arrivée *</span><select name="heure" id="rHeure" required></select></label>
+              <label class="field"><span>Nombre de personnes *</span>
+                <div class="stepper"><button type="button" data-step="-1" aria-label="Moins">−</button><input type="number" name="personnes" id="rPers" value="2" min="1" max="20" required><button type="button" data-step="1" aria-label="Plus">+</button></div>
+              </label>
+            </div>
+            <div class="field"><span>Où souhaitez-vous être installé ?</span>
+              <div class="choice">
+                <label><input type="radio" name="placement" value="Salle" checked><span>En salle</span></label>
+                <label><input type="radio" name="placement" value="Terrasse"><span>En terrasse</span></label>
+                <label><input type="radio" name="placement" value="Peu importe"><span>Peu importe</span></label>
+              </div>
+            </div>
+            <div class="field"><span>L'occasion</span>
+              <div class="choice">
+                <label><input type="radio" name="occasion" value="Repas" checked><span>Repas</span></label>
+                <label><input type="radio" name="occasion" value="Anniversaire"><span>Anniversaire</span></label>
+                <label><input type="radio" name="occasion" value="Professionnel"><span>Professionnel</span></label>
+                <label><input type="radio" name="occasion" value="Apéro / bar"><span>Apéritif</span></label>
+              </div>
+            </div>
+            <p class="note" id="groupNote" hidden>Pour un groupe de plus de 8 personnes, nous vous conseillons aussi de nous appeler au <a href="tel:+33963450112">09 63 45 01 12</a>.</p>
+          </fieldset>
+
+          <!-- 2 -->
+          <fieldset class="resa__block reveal">
+            <legend><span>2</span> Votre menu à l'avance <em>(facultatif)</em></legend>
+            <p class="note">Ajoutez les plats que vous souhaitez : nous les préparerons pour votre arrivée. Le paiement se fait sur place. Vous pouvez aussi passer cette étape et choisir à table.</p>
+            <div class="picker">
+              <div class="picker__tabs" id="pTabs"></div>
+              <div class="picker__list" id="pList"></div>
+            </div>
+            <div class="basket" id="basket">
+              <h4>Votre sélection</h4>
+              <ul id="basketList"><li class="basket__empty">Aucun plat sélectionné pour le moment.</li></ul>
+              <p class="basket__total">Total estimé : <strong id="basketTotal">0,00 €</strong></p>
+            </div>
+            <textarea name="precommande" id="rPre" hidden></textarea>
+            <input type="hidden" name="total_estime" id="rTotal">
+          </fieldset>
+
+          <!-- 3 -->
+          <fieldset class="resa__block reveal">
+            <legend><span>3</span> Vos coordonnées</legend>
+            <div class="fields fields--2">
+              <label class="field"><span>Nom et prénom *</span><input type="text" name="nom" autocomplete="name" required></label>
+              <label class="field"><span>Téléphone *</span><input type="tel" name="telephone" autocomplete="tel" placeholder="06 12 34 56 78" required pattern="[0-9 +().-]{9,}"></label>
+              <label class="field"><span>E-mail (facultatif)</span><input type="email" name="email" autocomplete="email"></label>
+              <label class="field"><span>Être recontacté par</span><select name="contact"><option>Appel</option><option>SMS</option><option>E-mail</option></select></label>
+            </div>
+            <label class="field"><span>Allergies ou régime particulier</span><input type="text" name="allergies" placeholder="Ex : allergie aux crevettes, sans gluten, végétarien…"></label>
+            <label class="field"><span>Une demande particulière ?</span><textarea name="message" rows="3" placeholder="Ex : chaise bébé, gâteau d'anniversaire, table au calme…"></textarea></label>
+            <label class="check"><input type="checkbox" name="consentement" value="oui" required><span>J'accepte que mes informations soient utilisées uniquement pour traiter ma réservation. <a href="confidentialite.html">En savoir plus</a> *</span></label>
+          </fieldset>
+
+          <div class="resa__submit reveal">
+            <p class="note">* Champs obligatoires. Votre réservation est <strong>confirmée uniquement après notre appel ou message</strong>.</p>
+            <p class="form-error" id="formError" hidden>Merci de remplir les champs obligatoires signalés en rouge.</p>
+            <button class="btn btn--primary btn--lg" type="submit">Envoyer ma demande de réservation <svg class="ico"><use href="#i-arrow"/></svg></button>
+          </div>
+        </form>
+
+        <!-- Récapitulatif -->
+        <aside class="resa__aside">
+          <div class="recap" id="recap">
+            <p class="eyebrow">Récapitulatif</p>
+            <h3>Votre réservation</h3>
+            <ul>
+              <li><span>Date</span><b id="sDate">À choisir</b></li>
+              <li><span>Heure</span><b id="sHeure">À choisir</b></li>
+              <li><span>Personnes</span><b id="sPers">2</b></li>
+              <li><span>Place</span><b id="sPlace">Salle</b></li>
+              <li><span>Plats</span><b id="sPlats">Aucun</b></li>
+              <li><span>Total estimé</span><b id="sTotal">0,00 €</b></li>
+            </ul>
+            <p class="note">Vous préférez réserver de vive voix ?</p>
+            <a class="btn btn--ghost" href="tel:+33963450112" style="width:100%"><svg class="ico"><use href="#i-phone"/></svg> 09 63 45 01 12</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- AVANT VOTRE ARRIVÉE -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">À savoir</p>
+          <h2>Avant votre <span class="accent">arrivée</span></h2>
+          <p class="section__lead">Tout ce qu'il faut savoir pour que votre venue se passe parfaitement.</p>
+        </header>
+        <div class="pourquoi__grid">
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-phone"/></svg></span><h3>Attendez la confirmation</h3><p>Votre demande n'est pas une réservation définitive. Nous vous rappelons pour la valider.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico">⏰</span><h3>Soyez à l'heure</h3><p>En cas de retard de plus de 15 minutes, prévenez-nous : la table pourra être attribuée à d'autres clients.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-card"/></svg></span><h3>Paiement sur place</h3><p>Rien n'est payé en ligne. Les plats commandés à l'avance se règlent au restaurant.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-alert"/></svg></span><h3>Allergies</h3><p>Indiquez-les dans le formulaire et rappelez-les en arrivant à l'équipe.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-cancel"/></svg></span><h3>Annulation</h3><p>Un empêchement ? Appelez-nous au 09 63 45 01 12 le plus tôt possible.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-rain"/></svg></span><h3>Terrasse</h3><p>En cas de mauvais temps, nous vous installons en salle selon la place disponible.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-pin"/></svg></span><h3>Nous trouver</h3><p>35 bd du Général Leclerc, Nanterre. <a class="link" href="contact.html">Itinéraire</a></p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-users"/></svg></span><h3>Groupes</h3><p>Au-delà de 8 personnes, appelez-nous pour organiser au mieux votre venue.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/reservation.js"></script>
+</body>
+</html>

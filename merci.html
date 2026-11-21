@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demande envoyée · Bambou chez Zhu</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="">
+  <main>
+    <section class="section" style="padding-top:160px">
+      <div class="container merci">
+        <div class="merci__check"><svg class="ico"><use href="#i-check"/></svg></div>
+        <h1 class="hero__title" style="font-size:clamp(2.6rem,6vw,4.2rem)">Merci&nbsp;!</h1>
+        <p class="section__lead">Votre demande de réservation a bien été envoyée. <strong>Elle n'est pas encore confirmée</strong> : nous vous recontactons très vite pour la valider.</p>
+        <div class="recap" id="merciRecap" hidden>
+          <p class="eyebrow">Votre demande</p>
+          <ul id="merciList"></ul>
+        </div>
+        <p class="note">Pas de nouvelles d'ici quelques heures ? Appelez-nous au <a href="tel:+33963450112">09 63 45 01 12</a>.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px">
+          <a class="btn btn--primary" href="index.html">Retour à l'accueil</a>
+          <a class="btn btn--ghost" href="carte.html">Voir la carte</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    try {
+      const r = JSON.parse(sessionStorage.getItem("bambou-resa") || "null");
+      if (r) {
+        const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+        const rows = [["Date", r.date], ["Heure", r.heure], ["Personnes", r.personnes], ["Place", r.place]];
+        if (r.plats) rows.push(["Plats", r.plats], ["Total estimé", r.total]);
+        document.getElementById("merciList").innerHTML = rows.map(([a, b]) => `<li><span>${a}</span><b>${esc(b).replace(/\n/g, "<br>")}</b></li>`).join("");
+        document.getElementById("merciRecap").hidden = false;
+      }
+    } catch (e) {}
+  </script>
+</body>
+</html>

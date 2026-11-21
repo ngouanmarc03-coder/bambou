@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bambou chez Zhu · Bar, brasserie & traiteur asiatique à Nanterre</title>
+  <meta name="description" content="Bambou chez Zhu : bar, brasserie et traiteur asiatique à Nanterre. Sushis, inari, rolls, plats au wok, entrées halal. Sur place, à emporter ou en livraison Deliveroo.">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="icon" href="images/lieu/logo.png">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Bambou chez Zhu · Nanterre">
+  <meta property="og:description" content="Cuisine asiatique, sushis, wok et brasserie. Commandez sur Deliveroo ou venez nous voir.">
+  <meta property="og:image" content="images/lieu/facade.webp">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bambou chez Zhu",
+    "image": "images/lieu/facade.webp",
+    "servesCuisine": ["Asiatique", "Chinois", "Japonais", "Sushi"],
+    "telephone": "+33963450112",
+    "address": { "@type": "PostalAddress", "streetAddress": "35 boulevard du Général Leclerc", "postalCode": "92000", "addressLocality": "Nanterre", "addressCountry": "FR" },
+    "priceRange": "€",
+    "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:20" }],
+    "hasMenu": "https://deliveroo.fr/fr/menu/paris/nanterre-centre/bambou-nanterre"
+  }
+  </script>
+</head>
+<body data-page="accueil">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <svg viewBox="0 0 64 64" class="loader__bamboo"><use href="#bamboo"/></svg>
+      <span>BAMBOU</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+      <div class="hero__bg" style="background-image:url('images/lieu/facade.webp')"></div>
+      <div class="hero__veil"></div>
+      <div class="hero__glow" id="glow"></div>
+      <div class="hero__petals" id="petals" aria-hidden="true"></div>
+      <div class="hero__leaves" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><use href="#bamboo"/></svg>
+        <svg viewBox="0 0 64 64"><use href="#bamboo"/></svg>
+        <svg viewBox="0 0 64 64"><use href="#bamboo"/></svg>
+      </div>
+      <div class="hero__content container">
+        <p class="eyebrow reveal">Bar · Brasserie · Traiteur asiatique · Nanterre</p>
+        <h1 class="hero__title">
+          <span class="split">BAMBOU</span>
+          <em class="reveal">chez Zhu</em>
+        </h1>
+        <p class="hero__lead reveal">Sushis, inari, rolls signature, plats sautés au wok et entrées halal. Une adresse de quartier à Nanterre, une cuisine qui voyage.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary btn--lg js-deliveroo" href="#"><svg class="ico"><use href="#i-bike"/></svg> Commander sur Deliveroo</a>
+          <a class="btn btn--ghost btn--lg" href="carte.html">Découvrir la carte <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="hero__chips reveal">
+          <li><span class="dot"></span> <span id="openStatus">Lun – sam · 10h – 20h20</span></li>
+          <li>Entrées & plats halal</li>
+          <li>Sur place · À emporter · Livraison</li>
+        </ul>
+      </div>
+      <div class="hero__dishes" aria-hidden="true">
+        <img src="images/poisson-sel-poivre.webp" alt="">
+        <img src="images/inari-poulet-caramel.webp" alt="">
+        <img src="images/sushi-3-saumon-8-california.webp" alt="">
+        <img src="images/gyoza-poulet.webp" alt="">
+      </div>
+      <a href="#bienvenue" class="scroll-cue" aria-label="Défiler vers le bas"><span></span></a>
+    </section>
+
+    <section class="marquee" aria-label="Aperçu de nos plats">
+      <div class="marquee__row" id="marqueeA"></div>
+      <div class="marquee__row marquee__row--rev" id="marqueeB"></div>
+    </section>
+
+    <!-- BIENVENUE -->
+    <section class="section" id="bienvenue">
+      <div class="container split-block">
+        <div class="split-block__media curtain"><img src="images/lieu/facade.webp" alt="La façade du Bambou et sa terrasse" loading="lazy"></div>
+        <div class="split-block__text reveal">
+          <p class="eyebrow">Bienvenue</p>
+          <h2>Bambou, <span class="accent">c'est quoi&nbsp;?</span></h2>
+          <p>Bambou chez Zhu est un lieu à trois facettes, au 35 boulevard du Général Leclerc à Nanterre :</p>
+          <ul>
+            <li><strong>Un traiteur asiatique</strong> : sushis, inari, rolls, nems, plats au wok, à emporter ou livrés.</li>
+            <li><strong>Une brasserie</strong> : une grande salle lumineuse et une terrasse pour déjeuner ou prendre un café.</li>
+            <li><strong>Un bar</strong> : bières pression, bouteilles et vin, pour se retrouver en fin de journée.</li>
+          </ul>
+          <p>Sur ce site, vous trouverez <strong>toute la carte avec les prix et les photos</strong>, les explications pour commander, et toutes les infos pratiques.</p>
+          <a class="link" href="restaurant.html">Découvrir le restaurant <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHIFFRES -->
+    <section class="section section--tight">
+      <div class="container stats">
+        <div class="stat reveal"><strong data-count="" class="js-count">55</strong><span>plats et boissons à la carte</span></div>
+        <div class="stat reveal"><strong data-count="10">10</strong><span>catégories, des inari aux desserts</span></div>
+        <div class="stat reveal"><strong data-count="3">3</strong><span>façons de commander</span></div>
+        <div class="stat reveal"><strong>6j/7</strong><span>du lundi au samedi, 10h – 20h20</span></div>
+      </div>
+    </section>
+
+    <!-- UNIVERS -->
+    <section class="section section--alt univers" id="univers">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Une adresse, trois univers</p>
+          <h2>L'univers <span class="accent">Bambou</span></h2>
+          <p class="section__lead">Chaque univers a sa page, avec tous les détails. Choisissez celui qui vous intéresse.</p>
+        </header>
+        <div class="univers__grid">
+          <article class="u-card reveal">
+            <div class="u-card__media curtain"><img src="images/roll-tempura-crevette-avocat.webp" alt="Roll tempura crevette avocat" loading="lazy"></div>
+            <div class="u-card__body">
+              <span class="u-card__num">01</span>
+              <h3>Traiteur asiatique</h3>
+              <p>Sushis, rolls, inari, nems, wok et bobun : toute la carte préparée à la commande, en livraison ou à emporter.</p>
+              <a class="link" href="carte.html">Voir la carte <svg class="ico"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="u-card reveal">
+            <div class="u-card__media curtain"><img src="images/lieu/salle.jpg" onerror="this.onerror=null;this.src='images/lieu/interieur.jpg'" alt="Le comptoir lumineux du Bambou" loading="lazy"></div>
+            <div class="u-card__body">
+              <span class="u-card__num">02</span>
+              <h3>Brasserie</h3>
+              <p>Une salle aux tons verts et une grande terrasse sur la place : on s'installe pour déjeuner, un café ou un thé.</p>
+              <a class="link" href="brasserie.html">La brasserie <svg class="ico"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="u-card reveal">
+            <div class="u-card__media curtain"><img src="images/biere-tsingtao.webp" alt="Bière Tsingtao" loading="lazy"></div>
+            <div class="u-card__body">
+              <span class="u-card__num">03</span>
+              <h3>Bar</h3>
+              <p>Asahi et Monaco à la pression, bières en bouteille, Tsingtao et vin au pichet : le moment détente du quartier.</p>
+              <a class="link" href="brasserie.html#boissons">Nos boissons <svg class="ico"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFRE -->
+    <section class="section offer">
+      <div class="container offer__inner reveal">
+        <div class="offer__text">
+          <p class="eyebrow">Offre en cours sur Deliveroo</p>
+          <h2 class="no-words">1 plat acheté<br><span class="accent">= 1 plat offert</span></h2>
+          <p><strong>Comment ça marche ?</strong> Ajoutez deux fois le même plat parmi les quatre ci-contre dans votre panier Deliveroo : le deuxième est offert. Conditions affichées sur Deliveroo au moment de la commande.</p>
+          <a class="btn btn--primary js-deliveroo" href="#">J'en profite <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="offer__plates" id="offerPlates"></div>
+      </div>
+    </section>
+
+    <!-- COUPS DE CŒUR -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Les plus commandés sur Deliveroo</p>
+          <h2>Nos <span class="accent">coups de cœur</span></h2>
+          <p class="section__lead">Les quatre plats préférés de nos clients. Cliquez sur un plat pour voir sa description.</p>
+        </header>
+        <div class="favoris__grid" id="favoris"></div>
+      </div>
+    </section>
+
+    <!-- CATÉGORIES -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Toute la carte en un coup d'œil</p>
+          <h2>Que voulez-vous <span class="accent">manger&nbsp;?</span></h2>
+          <p class="section__lead">Chaque catégorie vous mène directement à sa section sur la page « La carte », avec tous les plats, les prix et les explications.</p>
+        </header>
+        <div class="cat-grid" id="catPreview"></div>
+      </div>
+    </section>
+
+    <!-- COMMENT COMMANDER -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Simple et rapide</p>
+          <h2>Commander en <span class="accent">3 étapes</span></h2>
+        </header>
+        <div class="steps">
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-search"/></svg></div><h3>Choisissez</h3><p>Parcourez la carte sur ce site : photos, prix, descriptions et repères (halal, épicé, végétarien).</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-bike"/></svg></div><h3>Commandez</h3><p>Cliquez sur « Commander » : vous arrivez sur notre page Deliveroo, où vous ajoutez vos plats au panier et payez.</p></div>
+          <div class="step reveal"><div class="step__ico"><svg class="ico"><use href="#i-bag"/></svg></div><h3>Régalez-vous</h3><p>Nous préparons tout à la commande, un livreur vous l'apporte. Vous pouvez aussi passer le récupérer, ou manger sur place.</p></div>
+        </div>
+        <p class="mt"><a class="link" href="commander.html">Toutes les façons de commander, expliquées <svg class="ico"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- POURQUOI -->
+    <section class="section section--tight pourquoi">
+      <div class="container">
+        <div class="pourquoi__grid">
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Halal</h3><p>Hors-d'œuvre et plats chauds préparés avec des viandes halal.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-flame"/></svg></span><h3>Wok minute</h3><p>Chaque plat chaud est sauté à la commande, pour un croquant intact.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-chopsticks"/></svg></span><h3>Large choix</h3><p>Inari, rolls signature, sushis, entrées, wok : il y en a pour toutes les envies.</p></div>
+          <div class="p-item reveal"><span class="p-item__ico"><svg class="ico"><use href="#i-bike"/></svg></span><h3>Livré chez vous</h3><p>Toute la carte disponible en livraison avec Deliveroo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPEL FINAL -->
+    <section class="final">
+      <div class="final__bg" style="background-image:url('images/lieu/facade.webp')"></div>
+      <div class="container final__inner reveal">
+        <svg class="final__bamboo" viewBox="0 0 64 64"><use href="#bamboo"/></svg>
+        <h2>Une petite faim&nbsp;?</h2>
+        <p>Toute la carte Bambou, livrée chez vous en quelques clics.</p>
+        <a class="btn btn--primary btn--lg js-deliveroo" href="#"><svg class="ico"><use href="#i-bike"/></svg> Commander sur Deliveroo</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
